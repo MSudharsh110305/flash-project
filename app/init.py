@@ -12,6 +12,7 @@ def create_app(config_class):
     login_manager.init_app(app)
     socketio.init_app(app)
 
+
     app.register_blueprint(auth_blueprint, url_prefix='/auth')
     app.register_blueprint(projects_blueprint, url_prefix='/projects')
 
